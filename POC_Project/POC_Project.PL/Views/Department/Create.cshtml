@@ -1,0 +1,31 @@
+﻿@model DepartmentVM
+
+@{
+    ViewData["Title"] = SharedLocalizer["Create"];
+    ViewData["NameOfTitle"] = SharedLocalizer["Create"];
+}
+
+<div class="block-header">
+    <h2>@SharedLocalizer["CreateDepartment"]</h2>
+</div>
+
+<form asp-controller="Department" asp-action="Create" class="form-group">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    @{ await Html.RenderPartialAsync("~/Views/Partials/Department/CreateUpdate"); }
+
+
+    <center>
+        <input type="submit" value="@SharedLocalizer["Save"]" class="btn btn-primary" />
+        <input type="reset" value="@SharedLocalizer["Cancel"]" class="btn btn-danger" />
+    </center>
+</form>
+
+
+@section JaqueryValidation
+{
+    <script src="~/plugins/jquery-validation/jquery.validate.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+

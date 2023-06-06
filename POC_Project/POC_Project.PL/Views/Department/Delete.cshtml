@@ -1,0 +1,21 @@
+﻿@model DepartmentVM
+
+@{
+    ViewData["Title"] = "Delete";
+    ViewData["NameOfTitle"] = "Delete";
+}
+
+
+<div class="block-header">
+    <h2>@SharedLocalizer["DeleteDepartment"] @Model.Name </h2>
+</div>
+
+<form asp-controller="Department" asp-action="Delete" class="form-group">
+
+    @{ await Html.RenderPartialAsync("~/Views/Partials/Department/DeleteDetails.cshtml"); }
+   
+    <center>
+        <a asp-action="Index" class="btn btn-warning">@SharedLocalizer["Return"]</a>
+        <input type="submit" value="@SharedLocalizer["Delete"]" asp-route-id="@Model.Id" class="btn btn-danger" />
+    </center>
+</form>

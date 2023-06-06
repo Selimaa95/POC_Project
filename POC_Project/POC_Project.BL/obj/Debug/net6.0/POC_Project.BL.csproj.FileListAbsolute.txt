@@ -1,0 +1,15 @@
+E:\Web Development\Other\Projects\POC\POC_Project\POC_Project.BL\bin\Debug\net6.0\POC_Project.BL.deps.json
+E:\Web Development\Other\Projects\POC\POC_Project\POC_Project.BL\bin\Debug\net6.0\POC_Project.BL.dll
+E:\Web Development\Other\Projects\POC\POC_Project\POC_Project.BL\bin\Debug\net6.0\POC_Project.BL.pdb
+E:\Web Development\Other\Projects\POC\POC_Project\POC_Project.BL\obj\Debug\net6.0\POC_Project.BL.csproj.AssemblyReference.cache
+E:\Web Development\Other\Projects\POC\POC_Project\POC_Project.BL\obj\Debug\net6.0\POC_Project.BL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Web Development\Other\Projects\POC\POC_Project\POC_Project.BL\obj\Debug\net6.0\POC_Project.BL.AssemblyInfoInputs.cache
+E:\Web Development\Other\Projects\POC\POC_Project\POC_Project.BL\obj\Debug\net6.0\POC_Project.BL.AssemblyInfo.cs
+E:\Web Development\Other\Projects\POC\POC_Project\POC_Project.BL\obj\Debug\net6.0\POC_Project.BL.csproj.CoreCompileInputs.cache
+E:\Web Development\Other\Projects\POC\POC_Project\POC_Project.BL\obj\Debug\net6.0\POC_Project.BL.dll
+E:\Web Development\Other\Projects\POC\POC_Project\POC_Project.BL\obj\Debug\net6.0\refint\POC_Project.BL.dll
+E:\Web Development\Other\Projects\POC\POC_Project\POC_Project.BL\obj\Debug\net6.0\POC_Project.BL.pdb
+E:\Web Development\Other\Projects\POC\POC_Project\POC_Project.BL\obj\Debug\net6.0\ref\POC_Project.BL.dll
+E:\Web Development\Other\Projects\POC\POC_Project\POC_Project.BL\bin\Debug\net6.0\POC_Project.DAL.dll
+E:\Web Development\Other\Projects\POC\POC_Project\POC_Project.BL\bin\Debug\net6.0\POC_Project.DAL.pdb
+E:\Web Development\Other\Projects\POC\POC_Project\POC_Project.BL\obj\Debug\net6.0\POC_Project.BL.csproj.CopyComplete

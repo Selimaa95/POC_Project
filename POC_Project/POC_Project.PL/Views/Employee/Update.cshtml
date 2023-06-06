@@ -1,0 +1,99 @@
+﻿@model EmployeeVM
+
+@{
+    ViewData["Title"] = SharedLocalizer["Update"];
+    ViewData["NameOfTitle"] = SharedLocalizer["Update"];
+}
+
+<div class="block-header">
+    <h2>@SharedLocalizer["UpdateEmployee"]<span style="color:red">@Model.Name</span></h2>
+</div>
+
+<form asp-controller="Employee" asp-action="Update" class="form-group">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <input type="hidden" asp-for="CreationDate" />
+
+    @{ await Html.RenderPartialAsync("~/Views/Partials/Employee/CreateUpdate.cshtml"); }
+
+
+    <center>
+        <input type="submit" value="@SharedLocalizer["Update"]" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-success">@SharedLocalizer["Return"]</a>
+        <input type="reset" value="@SharedLocalizer["Cancel"]" class="btn btn-danger" />
+    </center>
+    <br />
+</form>
+
+
+@section JaqueryValidation
+{
+    <script src="~/plugins/jquery-validation/jquery.validate.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    <script>
+
+        $(function () {
+
+
+            $("#CountryList").change(function () {
+
+                $("#CityList").empty();
+                $("#CityList").append("<option>Choose City</option>");
+
+                var CountryId = $("#CountryList option:selected").val();
+
+                $.ajax({
+
+                    type: "POST",
+                    url: "/Employee/GetCityByCountryId",
+                    data: { CntryId: CountryId },
+                    success: function (res) {
+
+                        $.each(res, function (i, e) {
+
+                            $("#CityList").append("<option value='" + e.Id + "'>" + e.Name + "</option>");
+
+                        });
+
+                        $('select').selectpiker('refresh');
+
+                    }
+                });
+            });
+
+
+            $("#CityList").change(function () {
+
+                $("#DistrictId").empty();
+                $("#DistrictId").append("<option>Choose District</option>");
+
+                var CityId = $("#CityList option:selected").val();
+
+                $.ajax({
+
+                    type: "POST",
+                    url: "/Employee/GetDistrictByCityId",
+                    data: { CtyId: CityId },
+                    success: function (res) {
+
+                        $.each(res, function (i, e) {
+
+                            $("#DistrictId").append("<option value='" + e.Id + "'>" + e.Name + "</option>");
+
+                        });
+
+                        $('select').selectpiker('refresh');
+
+                    }
+                });
+            });
+
+
+        });
+
+    </script>
+
+}
+

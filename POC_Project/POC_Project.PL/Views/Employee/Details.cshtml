@@ -1,0 +1,20 @@
+﻿@model EmployeeVM
+
+@{
+    ViewData["Title"] = SharedLocalizer["Details"];
+    ViewData["NameOfTitle"] = SharedLocalizer["Details"];
+}
+
+<div class="block-header">
+    <h2> @SharedLocalizer["DetailsEmployee"] <span style="color:red">@Model.Name</span></h2>
+</div>
+<br />
+
+@{ await Html.RenderPartialAsync("~/Views/Partials/Employee/DetailsDelete.cshtml"); }
+
+<center>
+    <a asp-action="Index" class="btn btn-success">@SharedLocalizer["Return"]</a>
+    <a asp-action="Update" asp-route-id="@Model.Id" class="btn btn-primary">@SharedLocalizer["Update"]</a>
+    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">@SharedLocalizer["Delete"]</a>
+</center>
+<br />
